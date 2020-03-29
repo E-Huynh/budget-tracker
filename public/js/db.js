@@ -2,6 +2,8 @@ let db;
 // create a new db request for a "budget" database.
 const request = indexedDB.open("budget", 1);
 
+console.log('db.js')
+
 request.onupgradeneeded = function(event) {
    // create object store called "pending" and set autoIncrement to true
   const db = event.target.result;
