@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const compression = require("compression");
 const PORT = 3000;
 const app = express();
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget"
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://<user1>:<password1>@ds145694.mlab.com:45694/heroku_9fq55nmx"
 const options = {
   useNewUrlParser: true,
   useFindAndModify: false,
