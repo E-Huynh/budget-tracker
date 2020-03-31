@@ -10,7 +10,7 @@ const options = {
   useFindAndModify: false,
   useUnifiedTopology: true
 }
-
+mongoose.connect(MONGODB_URI, options);
 app.use(logger("dev"));
 
 app.use(compression());
@@ -19,7 +19,6 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(MONGODB_URI, options);
 
 // routes
 app.use(require("./routes/api.js"));
